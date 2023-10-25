@@ -10,9 +10,10 @@ let classButton = [
   "dashboard__item__button",
 ];
 
-function alterarStatus(item) {
-  let image = document.getElementById(`game-${item}`).querySelector("div");
-  let button = document.getElementById(`game-${item}`).querySelector("a");
+function alterarStatus(id) {
+  let gameSelecionado = document.getElementById(`game-${id}`);
+  let image = gameSelecionado.querySelector("div");
+  let button = gameSelecionado.querySelector("a");
 
   //Verifica a classe da imagem, se está alugado ou disponivel
   if (image.getAttribute("class") == classImage[0]) {
